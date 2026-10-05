@@ -1,26 +1,184 @@
 @import "tailwindcss";
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
-}
-
 @theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
   --font-sans: var(--font-geist-sans);
+  --font-arabic: var(--font-cairo);
   --font-mono: var(--font-geist-mono);
+  --color-ink: #101826;
+  --color-ink-soft: #1c2b3f;
+  --color-ink-muted: #4b5870;
+  --color-paper: #f6f1e8;
+  --color-mist: #ece4d6;
+  --color-spark: #f5b842;
+  --color-spark-bright: #ffd36a;
+  --color-teal: #2f9ea8;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+html {
+  scroll-behavior: smooth;
 }
 
 body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  background: var(--color-paper);
+  color: var(--color-ink);
+}
+
+details summary::-webkit-details-marker {
+  display: none;
+}
+
+.reveal {
+  opacity: 0;
+  transform: translateY(1.15rem);
+  transition:
+    opacity 0.75s cubic-bezier(0.22, 1, 0.36, 1),
+    transform 0.75s cubic-bezier(0.22, 1, 0.36, 1);
+  transition-delay: var(--reveal-delay, 0ms);
+}
+
+.reveal.is-visible {
+  opacity: 1;
+  transform: none;
+}
+
+.hero-enter {
+  animation: fade-up 0.85s cubic-bezier(0.22, 1, 0.36, 1) both;
+  animation-delay: var(--enter-delay, 0ms);
+}
+
+.hero-orb {
+  position: absolute;
+  border-radius: 9999px;
+  filter: blur(8px);
+  animation: orb-drift 14s ease-in-out infinite;
+}
+
+.hero-orb-spark {
+  top: -12%;
+  left: 8%;
+  width: 28rem;
+  height: 28rem;
+  background: radial-gradient(circle, rgba(245, 184, 66, 0.28), transparent 68%);
+}
+
+.hero-orb-teal {
+  top: 8%;
+  right: -8%;
+  width: 24rem;
+  height: 24rem;
+  background: radial-gradient(circle, rgba(47, 158, 168, 0.28), transparent 68%);
+  animation-delay: -5s;
+  animation-duration: 18s;
+}
+
+.hero-float {
+  animation: float-soft 7s ease-in-out infinite;
+}
+
+.hero-caret {
+  display: inline-block;
+  width: 0.55ch;
+  height: 1.05em;
+  margin-inline-start: 2px;
+  vertical-align: -0.12em;
+  background: var(--color-spark);
+  animation: caret-blink 1s steps(1, end) infinite;
+}
+
+.card-lift {
+  transition:
+    transform 0.4s cubic-bezier(0.22, 1, 0.36, 1),
+    box-shadow 0.4s ease,
+    border-color 0.4s ease;
+}
+
+.card-lift:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 22px 40px -24px rgba(16, 24, 38, 0.45);
+}
+
+.card-lift:hover,
+.card-lift:focus-within {
+  border-color: color-mix(in srgb, var(--color-spark) 55%, transparent);
+}
+
+details[open] .faq-answer {
+  animation: fade-up 0.35s cubic-bezier(0.22, 1, 0.36, 1) both;
+}
+
+.mobile-nav-enter {
+  animation: fade-up 0.28s cubic-bezier(0.22, 1, 0.36, 1) both;
+}
+
+@keyframes fade-up {
+  from {
+    opacity: 0;
+    transform: translateY(18px);
+  }
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
+
+@keyframes orb-drift {
+  0%,
+  100% {
+    transform: translate(0, 0) scale(1);
+  }
+  50% {
+    transform: translate(4%, 6%) scale(1.08);
+  }
+}
+
+@keyframes float-soft {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+}
+
+@keyframes caret-blink {
+  0%,
+  49% {
+    opacity: 1;
+  }
+  50%,
+  100% {
+    opacity: 0;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+
+  .reveal,
+  .hero-enter {
+    opacity: 1;
+    transform: none;
+    animation: none;
+  }
+
+  .hero-orb,
+  .hero-float,
+  .hero-caret {
+    animation: none;
+  }
+
+  .card-lift:hover {
+    transform: none;
+  }
 }

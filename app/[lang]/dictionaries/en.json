@@ -1,0 +1,194 @@
+{
+  "meta": {
+    "title": "DevSparks | Online Programming Courses",
+    "description": "Mentor-led online programming courses for beginners and career switchers. Learn web development, JavaScript, and job-ready skills with live feedback.",
+    "ogTitle": "Learn to code with DevSparks",
+    "ogDescription": "Project-based programming programs with mentors, career support, and bilingual instruction in English and Arabic.",
+    "keywords": "online programming courses, web development bootcamp, learn JavaScript, coding mentors, Arabic programming courses"
+  },
+  "skipToContent": "Skip to main content",
+  "nav": {
+    "home": "Home",
+    "features": "Why DevSparks",
+    "courses": "Courses & pricing",
+    "faq": "FAQ",
+    "contact": "Contact",
+    "openMenu": "Open menu",
+    "closeMenu": "Close menu",
+    "primaryCta": "Browse courses",
+    "language": "Language"
+  },
+  "hero": {
+    "eyebrow": "Online programming academy",
+    "title": "Build real software. Launch a career that actually ships.",
+    "lead": "DevSparks is a bilingual school for people who want more than video lectures. You write production-style projects, get mentor reviews, and leave with a portfolio you can defend in interviews.",
+    "primaryCta": "See programs",
+    "secondaryCta": "Talk to admissions",
+    "stats": [
+      { "value": "12-week", "label": "focused cohorts" },
+      { "value": "1:8", "label": "mentor to learner ratio" },
+      { "value": "AR + EN", "label": "instruction & community" }
+    ],
+    "codeCaption": "A typical first-week project",
+    "codeFilename": "spark.ts"
+  },
+  "features": {
+    "id": "features",
+    "eyebrow": "Why learners stay",
+    "title": "A studio, not a content dump",
+    "lead": "Every program is designed around shipping, feedback, and habits you can keep after the last lesson.",
+    "items": [
+      {
+        "title": "Mentor-reviewed code",
+        "body": "You submit real pull requests. Mentors comment on architecture, naming, and accessibility—not only whether it runs."
+      },
+      {
+        "title": "Projects that look like work",
+        "body": "Dashboards, APIs, auth flows, and content sites. Your portfolio tells a story hiring managers recognize."
+      },
+      {
+        "title": "Bilingual by design",
+        "body": "Learn in English or Arabic. Switch when it helps. Community spaces and office hours exist in both languages."
+      },
+      {
+        "title": "Live workshops, async pace",
+        "body": "Two live sessions a week plus recordings. The rest of the work fits around a job or university schedule."
+      },
+      {
+        "title": "Career studio",
+        "body": "Resume, GitHub, mock interviews, and a hiring-ready project brief. We treat the job search as a product."
+      },
+      {
+        "title": "Accessible classrooms",
+        "body": "Captions, keyboard-first demos, high-contrast materials, and transcripts so nobody is left behind."
+      }
+    ]
+  },
+  "courses": {
+    "id": "courses",
+    "eyebrow": "Programs",
+    "title": "Courses and pricing",
+    "lead": "Pick a path that matches your starting point. All prices are billed once per cohort. Scholarships are available after a short application.",
+    "currencyNote": "Prices in USD. Payment plans on request.",
+    "featured": "Most chosen",
+    "includesLabel": "Includes",
+    "cta": "Request a seat",
+    "items": [
+      {
+        "id": "foundations",
+        "src": "/courses/react.jpg",
+        "name": "Web Foundations",
+        "level": "Beginner",
+        "duration": "8 weeks",
+        "price": "$249",
+        "summary": "HTML, CSS, TypeScript basics, Git, and your first accessible landing page.",
+        "includes": [
+          "Weekly live lab",
+          "2 graded projects",
+          "Discord community",
+          "Certificate of completion"
+        ]
+      },
+      {
+        "id": "fullstack",
+        "src": "/courses/python-for-kids.jpg",
+        "name": "Full-Stack JavaScript",
+        "level": "Intermediate",
+        "duration": "12 weeks",
+        "price": "$799",
+        "summary": "Next.js, APIs, databases, auth, and a deployable product with tests.",
+        "includes": [
+          "Two mentors per cohort",
+          "Capstone with code review",
+          "Career studio access",
+          "Interview kit"
+        ]
+      },
+      {
+        "id": "career",
+        "src": "/courses/cpp.jpg",
+        "name": "Career Sprint",
+        "level": "Job-ready",
+        "duration": "6 weeks",
+        "price": "$449",
+        "summary": "Polish a flagship project, practice interviews, and ship a public case study.",
+        "includes": [
+          "Mock interviews",
+          "Portfolio rewrite",
+          "Hiring intro sessions",
+          "6 weeks of follow-up"
+        ]
+      }
+    ]
+  },
+  "faq": {
+    "id": "faq",
+    "eyebrow": "Questions",
+    "title": "Frequently asked questions",
+    "lead": "If you still need a human, write us in English or Arabic. We reply within two business days.",
+    "items": [
+      {
+        "question": "Do I need prior coding experience?",
+        "answer": "Web Foundations assumes none. Full-Stack expects comfort with HTML, CSS, and basic JavaScript. We share a short placement quiz after you apply."
+      },
+      {
+        "question": "Are classes live or recorded?",
+        "answer": "Both. Workshops are live twice a week, recorded with captions, and paired with async assignments. You can miss a session and still stay on track."
+      },
+      {
+        "question": "Can I study in Arabic?",
+        "answer": "Yes. Cohorts run with Arabic and English tracks. Mentors review code in either language. Technical terms stay in English so your GitHub still reads globally."
+      },
+      {
+        "question": "What is the time commitment?",
+        "answer": "Plan for 8–12 hours a week, including live sessions. Career Sprint is denser because it is built around interview drills."
+      },
+      {
+        "question": "Do you offer refunds?",
+        "answer": "You can withdraw in the first 7 days of a cohort for a full refund, minus payment processing fees. After that we can pause your seat for the next intake."
+      },
+      {
+        "question": "Will I get a certificate?",
+        "answer": "Yes, after you complete the required projects. The stronger signal is the public work you ship—we help you document it well."
+      }
+    ]
+  },
+  "contact": {
+    "id": "contact",
+    "eyebrow": "Admissions",
+    "title": "Tell us what you want to build",
+    "lead": "Share your goals and we will recommend a cohort. No automated spam—this form is read by the admissions team.",
+    "emailLabel": "Email",
+    "phoneLabel": "Phone",
+    "hoursLabel": "Office hours",
+    "hoursValue": "Sun–Thu, 10:00–18:00 GMT+3",
+    "form": {
+      "name": "Full name",
+      "namePlaceholder": "Alex Rahman",
+      "email": "Email address",
+      "emailPlaceholder": "you@example.com",
+      "phone": "Phone number",
+      "phonePlaceholder": "01012345678",
+      "track": "Program of interest",
+      "trackPlaceholder": "Select a program",
+      "message": "What do you want to learn?",
+      "messagePlaceholder": "Tell us about your background and timeline.",
+      "submit": "Send message",
+      "sending": "Sending…",
+      "success": "Thanks. Admissions will reply within two business days.",
+      "errorRequired": "This field is required.",
+      "errorEmail": "Enter a valid email address.",
+      "errorPhone": "Enter a valid phone number.",
+      "errorGeneric": "Something went wrong. Email us directly instead."
+    }
+  },
+  "footer": {
+    "tagline": "A bilingual programming school for builders who want feedback, not filler.",
+    "explore": "Explore",
+    "legal": "Legal",
+    "privacy": "Privacy",
+    "terms": "Terms",
+    "copyright": "All rights reserved.",
+    "madeFor": "Built for learners in Arabic and English."
+  }
+}
