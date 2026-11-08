@@ -27,7 +27,7 @@ export async function appendContactLead(lead: ContactLead): Promise<void> {
       secret,
       submittedAt: new Date().toISOString(),
     }),
-    redirect: "follow",
+    redirect: "error",
     cache: "no-store",
   });
 

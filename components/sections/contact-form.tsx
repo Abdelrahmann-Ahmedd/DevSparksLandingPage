@@ -1,5 +1,7 @@
 "use client";
 
+import { ContactFormField } from "@/components/sections/contact-form-field";
+import { contactLimits } from "@/lib/contact";
 import type { Dictionary } from "@/lib/dictionary";
 import type { Locale } from "@/lib/i18n";
 import { useId, useState, type FormEvent } from "react";
@@ -18,8 +20,6 @@ type FieldErrors = {
 };
 
 const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-const fieldClass =
-  "mt-2 w-full rounded-lg border border-ink/15 bg-paper px-3 py-2.5 text-ink outline-none focus:border-teal focus:ring-2 focus:ring-teal/30";
 
 export function ContactForm({ locale, dictionary }: ContactFormProps) {
   const form = dictionary.contact.form;
@@ -72,6 +72,7 @@ export function ContactForm({ locale, dictionary }: ContactFormProps) {
           phone: String(data.get("phone") ?? "").trim(),
           track: String(data.get("track") ?? "").trim(),
           message: String(data.get("message") ?? "").trim(),
+          website: String(data.get("website") ?? "").trim(),
           locale,
         }),
       });
@@ -91,126 +92,129 @@ export function ContactForm({ locale, dictionary }: ContactFormProps) {
     <form
       onSubmit={onSubmit}
       noValidate
-      className="rounded-2xl border border-ink/8 bg-white p-6 shadow-sm"
+      className="relative rounded-2xl border border-ink/8 bg-white p-6 shadow-sm"
       aria-describedby={status === "success" ? `${formId}-success` : undefined}
     >
+      <input
+        name="website"
+        type="text"
+        hidden
+        tabIndex={-1}
+        autoComplete="off"
+      />
+
       <div className="grid gap-5 sm:grid-cols-2">
-        <div>
-          <label htmlFor={`${formId}-name`} className="block text-sm font-medium text-ink">
-            {form.name}
-          </label>
-          <input
-            id={`${formId}-name`}
-            name="name"
-            autoComplete="name"
-            required
-            aria-invalid={Boolean(errors.name)}
-            aria-describedby={errors.name ? `${formId}-name-error` : undefined}
-            placeholder={form.namePlaceholder}
-            className={fieldClass}
-          />
-          {errors.name ? (
-            <p id={`${formId}-name-error`} className="mt-1 text-sm text-red-700">
-              {errors.name}
-            </p>
-          ) : null}
-        </div>
+        <ContactFormField
+          id={`${formId}-name`}
+          label={form.name}
+          error={errors.name}
+        >
+          {({ id, describedBy, invalid, className }) => (
+            <input
+              id={id}
+              name="name"
+              autoComplete="name"
+              required
+              maxLength={contactLimits.name}
+              aria-invalid={invalid}
+              aria-describedby={describedBy}
+              placeholder={form.namePlaceholder}
+              className={className}
+            />
+          )}
+        </ContactFormField>
 
-        <div>
-          <label htmlFor={`${formId}-email`} className="block text-sm font-medium text-ink">
-            {form.email}
-          </label>
-          <input
-            id={`${formId}-email`}
-            name="email"
-            type="email"
-            autoComplete="email"
-            inputMode="email"
-            required
-            aria-invalid={Boolean(errors.email)}
-            aria-describedby={errors.email ? `${formId}-email-error` : undefined}
-            placeholder={form.emailPlaceholder}
-            className={fieldClass}
-          />
-          {errors.email ? (
-            <p id={`${formId}-email-error`} className="mt-1 text-sm text-red-700">
-              {errors.email}
-            </p>
-          ) : null}
-        </div>
+        <ContactFormField
+          id={`${formId}-email`}
+          label={form.email}
+          error={errors.email}
+        >
+          {({ id, describedBy, invalid, className }) => (
+            <input
+              id={id}
+              name="email"
+              type="email"
+              autoComplete="email"
+              inputMode="email"
+              required
+              maxLength={contactLimits.email}
+              aria-invalid={invalid}
+              aria-describedby={describedBy}
+              placeholder={form.emailPlaceholder}
+              className={className}
+            />
+          )}
+        </ContactFormField>
 
-        <div>
-          <label htmlFor={`${formId}-phone`} className="block text-sm font-medium text-ink">
-            {form.phone}
-          </label>
-          <input
-            id={`${formId}-phone`}
-            name="phone"
-            type="tel"
-            autoComplete="tel"
-            inputMode="tel"
-            required
-            aria-invalid={Boolean(errors.phone)}
-            aria-describedby={errors.phone ? `${formId}-phone-error` : undefined}
-            placeholder={form.phonePlaceholder}
-            className={fieldClass}
-          />
-          {errors.phone ? (
-            <p id={`${formId}-phone-error`} className="mt-1 text-sm text-red-700">
-              {errors.phone}
-            </p>
-          ) : null}
-        </div>
+        <ContactFormField
+          id={`${formId}-phone`}
+          label={form.phone}
+          error={errors.phone}
+        >
+          {({ id, describedBy, invalid, className }) => (
+            <input
+              id={id}
+              name="phone"
+              type="tel"
+              autoComplete="tel"
+              inputMode="tel"
+              required
+              maxLength={contactLimits.phone}
+              aria-invalid={invalid}
+              aria-describedby={describedBy}
+              placeholder={form.phonePlaceholder}
+              className={className}
+            />
+          )}
+        </ContactFormField>
 
-        <div>
-          <label htmlFor={`${formId}-track`} className="block text-sm font-medium text-ink">
-            {form.track}
-          </label>
-          <select
-            id={`${formId}-track`}
-            name="track"
-            required
-            defaultValue=""
-            aria-invalid={Boolean(errors.track)}
-            aria-describedby={errors.track ? `${formId}-track-error` : undefined}
-            className={fieldClass}
-          >
-            <option value="" disabled>
-              {form.trackPlaceholder}
-            </option>
-            {dictionary.courses.items.map((course) => (
-              <option key={course.id} value={course.id}>
-                {course.name}
+        <ContactFormField
+          id={`${formId}-track`}
+          label={form.track}
+          error={errors.track}
+        >
+          {({ id, describedBy, invalid, className }) => (
+            <select
+              id={id}
+              name="track"
+              required
+              defaultValue=""
+              aria-invalid={invalid}
+              aria-describedby={describedBy}
+              className={className}
+            >
+              <option value="" disabled>
+                {form.trackPlaceholder}
               </option>
-            ))}
-          </select>
-          {errors.track ? (
-            <p id={`${formId}-track-error`} className="mt-1 text-sm text-red-700">
-              {errors.track}
-            </p>
-          ) : null}
-        </div>
+              {dictionary.courses.items.map((course) => (
+                <option key={course.id} value={course.id}>
+                  {course.name}
+                </option>
+              ))}
+            </select>
+          )}
+        </ContactFormField>
 
-        <div className="sm:col-span-2">
-          <label htmlFor={`${formId}-message`} className="block text-sm font-medium text-ink">
-            {form.message}
-          </label>
-          <textarea
-            id={`${formId}-message`}
-            name="message"
-            rows={5}
-            required
-            aria-invalid={Boolean(errors.message)}
-            aria-describedby={errors.message ? `${formId}-message-error` : undefined}
-            placeholder={form.messagePlaceholder}
-            className={`${fieldClass} resize-y`}
-          />
-          {errors.message ? (
-            <p id={`${formId}-message-error`} className="mt-1 text-sm text-red-700">
-              {errors.message}
-            </p>
-          ) : null}
-        </div>
+        <ContactFormField
+          id={`${formId}-message`}
+          label={form.message}
+          error={errors.message}
+          className="sm:col-span-2"
+        >
+          {({ id, describedBy, invalid, className }) => (
+            <textarea
+              id={id}
+              name="message"
+              rows={5}
+              required
+              maxLength={contactLimits.message}
+              aria-invalid={invalid}
+              aria-describedby={describedBy}
+              placeholder={form.messagePlaceholder}
+              className={`${className} resize-y`}
+            />
+          )}
+        </ContactFormField>
       </div>
 
       <button

@@ -1,13 +1,14 @@
 "use client";
 
 import { LanguageSwitcher } from "@/components/layout/language-switcher";
+import { getNavLinks, NavLinks } from "@/components/layout/nav-links";
 import type { Dictionary } from "@/lib/dictionary";
 import type { Locale } from "@/lib/i18n";
 import { siteConfig } from "@/lib/site";
-import Link from "next/link";
-import Image from "next/image";
-import { useState } from "react";
 import icon from "@/public/icon.png";
+import Image from "next/image";
+import Link from "next/link";
+import { useState } from "react";
 
 type SiteHeaderProps = {
   locale: Locale;
@@ -16,13 +17,7 @@ type SiteHeaderProps = {
 
 export function SiteHeader({ locale, dictionary }: SiteHeaderProps) {
   const [open, setOpen] = useState(false);
-
-  const links = [
-    { href: `/${locale}#features`, label: dictionary.nav.features },
-    { href: `/${locale}#courses`, label: dictionary.nav.courses },
-    { href: `/${locale}#faq`, label: dictionary.nav.faq },
-    { href: `/${locale}#contact`, label: dictionary.nav.contact },
-  ];
+  const links = getNavLinks(locale, dictionary);
 
   return (
     <header className="sticky top-0 z-40 border-b border-white/10 bg-ink/90 backdrop-blur-md">
@@ -41,15 +36,10 @@ export function SiteHeader({ locale, dictionary }: SiteHeaderProps) {
           className="hidden items-center gap-6 lg:flex"
           aria-label={dictionary.nav.home}
         >
-          {links.map((link) => (
-            <Link
-              key={link.href}
-              href={link.href}
-              className="text-sm text-paper/80 transition hover:text-spark focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-spark"
-            >
-              {link.label}
-            </Link>
-          ))}
+          <NavLinks
+            links={links}
+            className="text-sm text-paper/80 transition hover:text-spark focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-spark"
+          />
         </nav>
 
         <div className="hidden items-center gap-3 lg:flex">
