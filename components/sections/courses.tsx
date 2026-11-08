@@ -64,7 +64,10 @@ export function CoursesSection({ locale, dictionary }: CoursesSectionProps) {
                     >
                       {course.level} · {course.duration}
                     </p>
-                    <p className="mt-4 text-3xl font-semibold">{course.price}</p>
+                    <p className="mt-4 text-3xl font-semibold">
+                      {course.price}
+                      <span className="m-4 opacity-50 text-xl line-through">{course.offer}</span>
+                    </p>
                     <p
                       className={`mt-3 text-sm leading-6 ${featured ? "text-paper/75" : "text-ink-muted"}`}
                     >

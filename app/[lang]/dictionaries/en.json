@@ -1,155 +1,198 @@
 {
   "meta": {
-    "title": "DevSparks | Online Programming Courses",
-    "description": "Mentor-led online programming courses for beginners and career switchers. Learn web development, JavaScript, and job-ready skills with live feedback.",
-    "ogTitle": "Learn to code with DevSparks",
-    "ogDescription": "Project-based programming programs with mentors, career support, and bilingual instruction in English and Arabic.",
-    "keywords": "online programming courses, web development bootcamp, learn JavaScript, coding mentors, Arabic programming courses"
+    "title": "Dev Sparks | Online Programming Courses",
+    "description": "Online programming courses taught by instructors for beginners and career switchers. Learn web development, JavaScript, and job-ready skills with direct feedback.",
+    "ogTitle": "Learn Programming with Dev Sparks",
+    "ogDescription": "Project-based programming programs with mentors, career support, and a bilingual community in Arabic and English.",
+    "keywords": "online coding courses, web development, learn javascript, software mentors, Arabic programming courses"
   },
   "skipToContent": "Skip to main content",
   "nav": {
     "home": "Home",
-    "features": "Why DevSparks",
-    "courses": "Courses & pricing",
+    "features": "Why Dev Sparks",
+    "courses": "Courses & Pricing",
     "faq": "FAQ",
-    "contact": "Contact",
-    "openMenu": "Open menu",
-    "closeMenu": "Close menu",
-    "primaryCta": "Browse courses",
+    "contact": "Contact Us",
+    "openMenu": "Open Menu",
+    "closeMenu": "Close Menu",
+    "primaryCta": "Browse Courses",
     "language": "Language"
   },
   "hero": {
-    "eyebrow": "Online programming academy",
-    "title": "Build real software. Launch a career that actually ships.",
-    "lead": "DevSparks is a bilingual school for people who want more than video lectures. You write production-style projects, get mentor reviews, and leave with a portfolio you can defend in interviews.",
-    "primaryCta": "See programs",
-    "secondaryCta": "Talk to admissions",
+    "eyebrow": "Online Programming Academy",
+    "title": "Build real software. Launch a career that produces publishable work.",
+    "lead": "We offer specialized courses for kids and adults covering C++ programming fundamentals, logical thinking with Python, and full-stack web development tracks under expert mentorship.",
+    "primaryCta": "View Programs",
+    "secondaryCta": "Talk to Admissions",
     "stats": [
-      { "value": "12-week", "label": "focused cohorts" },
-      { "value": "1:8", "label": "mentor to learner ratio" },
-      { "value": "AR + EN", "label": "instruction & community" }
+      { "value": "6 Tracks", "label": "Customized programs for kids & adults" },
+      { "value": "Live & Hands-on", "label": "Projects & individual feedback" },
+      { "value": "AR + EN", "label": "Bilingual learning & community" }
     ],
-    "codeCaption": "A typical first-week project",
+    "codeCaption": "Sample project in week one",
     "codeFilename": "spark.ts"
   },
   "features": {
     "id": "features",
-    "eyebrow": "Why learners stay",
-    "title": "A studio, not a content dump",
-    "lead": "Every program is designed around shipping, feedback, and habits you can keep after the last lesson.",
+    "eyebrow": "Why Learners Stay",
+    "title": "A Training Studio, Not a Content Warehouse",
+    "lead": "Every program is designed around achievement, feedback, and habits that stick with you long after the final lesson.",
     "items": [
       {
-        "title": "Mentor-reviewed code",
-        "body": "You submit real pull requests. Mentors comment on architecture, naming, and accessibility—not only whether it runs."
+        "title": "Code Review by Mentors",
+        "body": "Submit your code and solutions to get detailed feedback from instructors on architecture, performance, and logic."
       },
       {
-        "title": "Projects that look like work",
-        "body": "Dashboards, APIs, auth flows, and content sites. Your portfolio tells a story hiring managers recognize."
+        "title": "Real-world Projects",
+        "body": "Practical apps, problem-solving challenges, and full-stack web projects that showcase your skills professionally."
       },
       {
-        "title": "Bilingual by design",
-        "body": "Learn in English or Arabic. Switch when it helps. Community spaces and office hours exist in both languages."
+        "title": "Bilingual by Design",
+        "body": "Learn in Arabic or English while keeping technical terms in English so you stay globally industry-ready."
       },
       {
-        "title": "Live workshops, async pace",
-        "body": "Two live sessions a week plus recordings. The rest of the work fits around a job or university schedule."
+        "title": "Live Workshops & Guidance",
+        "body": "Interactive weekly live sessions with practical implementations and ongoing tracking to ensure full comprehension."
       },
       {
-        "title": "Career studio",
-        "body": "Resume, GitHub, mock interviews, and a hiring-ready project brief. We treat the job search as a product."
+        "title": "Progressive Tracks",
+        "body": "Start from fundamentals and logical thinking all the way to Object-Oriented Programming (OOP) and modern web tech."
       },
       {
-        "title": "Accessible classrooms",
-        "body": "Captions, keyboard-first demos, high-contrast materials, and transcripts so nobody is left behind."
+        "title": "Accessible Classes",
+        "body": "Clear educational materials and graded exercises suitable for all age groups and skill levels."
       }
     ]
   },
   "courses": {
     "id": "courses",
     "eyebrow": "Programs",
-    "title": "Courses and pricing",
-    "lead": "Pick a path that matches your starting point. All prices are billed once per cohort. Scholarships are available after a short application.",
-    "currencyNote": "Prices in USD. Payment plans on request.",
-    "featured": "Most chosen",
+    "title": "Courses & Pricing",
+    "lead": "Choose the track that fits your current age and programming starting point.",
+    "currencyNote": "Prices are in US Dollars. Payment plans available upon request.",
+    "featured": "Most Popular",
     "includesLabel": "Includes",
-    "cta": "Request a seat",
+    "cta": "Request a Seat",
     "items": [
       {
-        "id": "foundations",
-        "src": "/courses/react.jpg",
-        "name": "Web Foundations",
-        "level": "Beginner",
-        "duration": "8 weeks",
-        "price": "$249",
-        "summary": "HTML, CSS, TypeScript basics, Git, and your first accessible landing page.",
+        "id": "python-kids",
+        "src": "/courses/python-for-kids.jpg",
+        "name": "Python Programming for Kids",
+        "level": "Ages 10 to 14",
+        "duration": "5 lectures (1 per week)",
+        "price": "650EP",
+        "offer": "1000EP",
+        "summary": "Programming fundamentals and logical thinking for kids using Python to build a strong coding foundation.",
         "includes": [
-          "Weekly live lab",
-          "2 graded projects",
-          "Discord community",
+          "Programming basics & logic",
+          "Fun exercises and apps",
+          "One lecture per week",
           "Certificate of completion"
         ]
       },
       {
-        "id": "fullstack",
-        "src": "/courses/python-for-kids.jpg",
-        "name": "Full-Stack JavaScript",
-        "level": "Intermediate",
-        "duration": "12 weeks",
-        "price": "$799",
-        "summary": "Next.js, APIs, databases, auth, and a deployable product with tests.",
+        "id": "cpp-basics",
+        "src": "/courses/cpp.jpg",
+        "name": "C++ Programming Basics",
+        "level": "Ages 14 and above",
+        "duration": "8 lectures (2 per week)",
+        "price": "800EP",
+        "offer": "1200EP", 
+        "summary": "Programming fundamentals, introduction to OOP and STLs, and problem-solving principles using C++.",
         "includes": [
-          "Two mentors per cohort",
-          "Capstone with code review",
-          "Career studio access",
-          "Interview kit"
+          "Introduction to OOP & STLs",
+          "Problem Solving exercises",
+          "Two lectures per week",
+          "Certificate of completion"
         ]
       },
       {
-        "id": "career",
-        "src": "/courses/cpp.jpg",
-        "name": "Career Sprint",
-        "level": "Job-ready",
-        "duration": "6 weeks",
-        "price": "$449",
-        "summary": "Polish a flagship project, practice interviews, and ship a public case study.",
+        "id": "cpp-oop-advanced",
+        "src": "/courses/oop.png",
+        "name": "C# Advanced OOP",
+        "level": "Advanced (Requires C++ basics)",
+        "duration": "6 lectures (2 per week)",
+        "price": "600EP",
+        "summary": "Advanced study of Object-Oriented Programming covering the 4 pillars: Classes, Abstraction, Interfaces, and Inheritance.",
         "includes": [
-          "Mock interviews",
-          "Portfolio rewrite",
-          "Hiring intro sessions",
-          "6 weeks of follow-up"
+          "In-depth OOP 4 pillars",
+          "Hands-on apps & projects",
+          "Two lectures per week",
+          "Certificate of completion"
+        ]
+      },
+      {
+        "id": "web-foundations",
+        "src": "/courses/web-designing.avif",
+        "name": "Web Foundations",
+        "level": "Ages 14 and above",
+        "duration": "7 sessions (2 per week)",
+        "price": "800EP",
+        "summary": "Learn to design and build essential website interfaces using HTML, CSS, and Bootstrap.",
+        "includes": [
+          "HTML & CSS",
+          "Bootstrap framework",
+          "Responsive web layouts",
+          "Certificate of completion"
+        ]
+      },
+      {
+        "id": "web-advanced-js-react",
+        "src": "/courses/react.jpg",
+        "name": "Advanced Web Development (JS & React)",
+        "level": "Intermediate (Requires Web Foundations)",
+        "duration": "7 sessions (2 per week)",
+        "price": "800EP",
+        "summary": "Master JavaScript, advanced JS concepts, and React to build dynamic web applications.",
+        "includes": [
+          "JavaScript & Advanced JS",
+          "React.js Library",
+          "Interactive apps & projects",
+          "Certificate of completion"
+        ]
+      },
+      {
+        "id": "nextjs-mastery",
+        "src": "/courses/3873464_403c_3.webp",
+        "name": "Next.js Mastery",
+        "level": "Advanced (Requires completion of previous 2 levels)",
+        "duration": "5 sessions",
+        "price": "600EP",
+        "summary": "Develop modern, fast, and SEO-friendly web applications using the Next.js framework.",
+        "includes": [
+          "Next.js Framework",
+          "Performance & SEO optimization",
+          "Full deployable project",
+          "Certificate of completion"
         ]
       }
     ]
   },
   "faq": {
     "id": "faq",
-    "eyebrow": "Questions",
-    "title": "Frequently asked questions",
-    "lead": "If you still need a human, write us in English or Arabic. We reply within two business days.",
+    "eyebrow": "FAQ",
+    "title": "Frequently Asked Questions",
+    "lead": "Need a real human? Reach out in Arabic or English. We reply within two business days.",
     "items": [
       {
-        "question": "Do I need prior coding experience?",
-        "answer": "Web Foundations assumes none. Full-Stack expects comfort with HTML, CSS, and basic JavaScript. We share a short placement quiz after you apply."
+        "question": "What are the available age groups for the courses?",
+        "answer": "The Python course is designed for kids aged 10 to 14. All other courses (C++ basics, Web, and OOP) are for adults aged 14 and above."
       },
       {
-        "question": "Are classes live or recorded?",
-        "answer": "Both. Workshops are live twice a week, recorded with captions, and paired with async assignments. You can miss a session and still stay on track."
+        "question": "Can I join the C++ Advanced OOP course directly?",
+        "answer": "Prerequisite for C++ Advanced OOP is a prior working knowledge of C++ fundamentals."
       },
       {
-        "question": "Can I study in Arabic?",
-        "answer": "Yes. Cohorts run with Arabic and English tracks. Mentors review code in either language. Technical terms stay in English so your GitHub still reads globally."
+        "question": "What are the requirements to start Advanced Web and Next.js courses?",
+        "answer": "Web Foundations require no prior experience. JS & React requires web basics knowledge, and Next.js requires completing both preceding web levels."
       },
       {
-        "question": "What is the time commitment?",
-        "answer": "Plan for 8–12 hours a week, including live sessions. Career Sprint is denser because it is built around interview drills."
+        "question": "Are the classes live or recorded?",
+        "answer": "Classes are held weekly in a live, interactive format with instructors to ensure hands-on practice and clear any questions."
       },
       {
-        "question": "Do you offer refunds?",
-        "answer": "You can withdraw in the first 7 days of a cohort for a full refund, minus payment processing fees. After that we can pause your seat for the next intake."
-      },
-      {
-        "question": "Will I get a certificate?",
-        "answer": "Yes, after you complete the required projects. The stronger signal is the public work you ship—we help you document it well."
+        "question": "Will I get a certificate upon completion?",
+        "answer": "Yes, learners receive a certificate of completion after finishing the required lectures, exercises, and projects for each course."
       }
     ]
   },
@@ -157,38 +200,38 @@
     "id": "contact",
     "eyebrow": "Admissions",
     "title": "Tell us what you want to build",
-    "lead": "Share your goals and we will recommend a cohort. No automated spam—this form is read by the admissions team.",
+    "lead": "Share your goals and we'll match you with the right cohort. No automated bots; our admissions team reads every submission.",
     "emailLabel": "Email",
     "phoneLabel": "Phone",
-    "hoursLabel": "Office hours",
-    "hoursValue": "Sun–Thu, 10:00–18:00 GMT+3",
+    "hoursLabel": "Working Hours",
+    "hoursValue": "Sun–Thu, 10:00–18:00 GST",
     "form": {
-      "name": "Full name",
-      "namePlaceholder": "Alex Rahman",
-      "email": "Email address",
+      "name": "Full Name",
+      "namePlaceholder": "Ahmed Rahman",
+      "email": "Email Address",
       "emailPlaceholder": "you@example.com",
-      "phone": "Phone number",
+      "phone": "Phone Number",
       "phonePlaceholder": "01012345678",
-      "track": "Program of interest",
+      "track": "Interested Program",
       "trackPlaceholder": "Select a program",
       "message": "What do you want to learn?",
-      "messagePlaceholder": "Tell us about your background and timeline.",
-      "submit": "Send message",
-      "sending": "Sending…",
-      "success": "Thanks. Admissions will reply within two business days.",
+      "messagePlaceholder": "Tell us about your background and schedule.",
+      "submit": "Send Message",
+      "sending": "Sending...",
+      "success": "Thank you. Our admissions team will reply within two business days.",
       "errorRequired": "This field is required.",
-      "errorEmail": "Enter a valid email address.",
-      "errorPhone": "Enter a valid phone number.",
-      "errorGeneric": "Something went wrong. Email us directly instead."
+      "errorEmail": "Please enter a valid email address.",
+      "errorPhone": "Please enter a valid phone number.",
+      "errorGeneric": "An error occurred. Please email us directly."
     }
   },
   "footer": {
-    "tagline": "A bilingual programming school for builders who want feedback, not filler.",
+    "tagline": "A bilingual programming school for builders who want real feedback, not fluff.",
     "explore": "Explore",
     "legal": "Legal",
     "privacy": "Privacy",
     "terms": "Terms",
     "copyright": "All rights reserved.",
-    "madeFor": "Built for learners in Arabic and English."
+    "madeFor": "Designed for Arabic and English learners."
   }
 }
